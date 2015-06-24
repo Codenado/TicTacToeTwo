@@ -7,8 +7,26 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+	<div class="container">
+		<div class="header">
+			<ul class="nav nav-pills nav-justified">
+				<h1>Tic Tac Toe</h1>
+				<br>
+				<% if current_user %>
+			  		<li role="presentation"> <%= link_to "Logout", '/logout' %></li>
+			  		<li role="presentation"> <%= link_to 'Home', '/' %> </li>
+			  		
+				<% else %>
+			 		<li role="presentation"> <%= link_to 'Login', '/login' %></li> 
+			 		<li role="presentation"><%= link_to 'Signup', '/users/new' %></li>
+					<li role="presentation"> <%= link_to 'Home', '/' %> </li>
+				<% end %>
+			</ul>
 
-<%= yield %>
-
+	<%= yield %>
+		</div>
+	</div>
 </body>
+	
+
 </html>
