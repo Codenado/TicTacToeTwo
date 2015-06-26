@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'board/show'
+
+  get 'board/create'
+
+  get 'usernew/create'
+
   get 'user_sessions/new'
 
   get 'user_sessions/create'
